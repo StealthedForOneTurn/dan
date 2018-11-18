@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"> 
+		<link rel="stylesheet" href="https://themeswitcher.csh.rit.edu/api/get" media="screen">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<title>Dan</title>
+		<style>
+		.jumbotron h1 {
+			text-align: center;
+		}
+		.col-sm-6 img-responsive {
+			margin: auto;    
+			display: block;
+		}
+		.col-sm-6 {
+			margin: auto;    
+			display: block;
+		}
+		.col a {
+			margin: auto;
+			display: block;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="jumbotron text-center">
+			<h1>Dan's Most Used Links</h1>
+		</div>
+		<div class="row">
+			<div class="col-sm-6 text-center">
+				<a href="{{ url_for('boneless') }}"><img class="img-responsive" src="static/boneless.png"></a>
+			</div>
+			<div class="col-sm-6 text-center">
+				<a href="{{ url_for('tino') }}"><img class="img-responsive" src="static/Dummies.png"></a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col text-center">
+				<a href="https://www.rit.edu/fa/compliance/content/reporting">Important Link For a Boneless Chairman!!</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col text-center">
+				<h1>Designed by Dan!</h1>
+			</div>
+		</div>
+	</body>
+</html>

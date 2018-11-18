@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://themeswitcher.csh.rit.edu/api/get" media="screen">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<title>Boneless</title>
+		<style>
+			table, td, th {
+				border-radius: 20px;
+				border: 2px solid black;
+				color: white;
+				width: 50%;
+				margin: 0px auto;
+				float: none;
+				background-color: black;
+			}
+			.col img-responsive {
+				margin: auto;
+				display: block;
+			}
+		</style>
+	</head>
+	<body onload="TestWrapper()">
+		<h1 class="jumbotron text-center">Boneless Status Page</h1>
+		<div class="row text-center">
+		<div class="col-sm-4 text-center">
+			<table class="text-center">
+				<tr>
+					<th>Name</th>
+					<th>Category</th>
+					<th>Score</th>
+				</tr>
+				<tr id="row1">
+				{% set randIndex = range(1,63) | random %}
+				{% set categoryIndex = range(1,26) | random %}
+					<td id="name">{{ people[randIndex].name }}</td>
+					<td id="cat">{{ cat[categoryIndex] }}</td>
+					<td id="score">{{ people[randIndex].results[cat[categoryIndex]] }}</td>
+				</tr>
+				<tr id="row2">
+				{% set randIndex = range(1,63) | random %}
+				{% set categoryIndex = range(1,26) | random %}
+					<td id="name2">{{ people[randIndex].name }}</td>
+					<td id="cat2">{{ cat[categoryIndex] }}</td>
+					<td id="score2">{{ people[randIndex].results[cat[categoryIndex]] }}</td>
+				</tr>
+				<tr id="row3">
+				{% set randIndex = range(1,63) | random %}
+				{% set categoryIndex = range(1,26) | random %}
+					<td id="name3">{{ people[randIndex].name }}</td>
+					<td id="cat3">{{ cat[categoryIndex] }}</td>
+					<td id="score3">{{ people[randIndex].results[cat[categoryIndex]] }}</td>
+				</tr>
+				<tr id="row4">
+				{% set randIndex = range(1,63) | random %}
+				{% set categoryIndex = range(1,26) | random %}
+					<td id="name4">{{ people[randIndex].name }}</td>
+					<td id="cat4">{{ cat[categoryIndex] }}</td>
+					<td id="score4">{{ people[randIndex].results[cat[categoryIndex]] }}</td>
+				</tr>
+				<tr id="row5">
+				{% set randIndex = range(1,63) | random %}
+				{% set categoryIndex = range(1,26) | random %}
+					<td id="name5">{{ people[randIndex].name }}</td>
+					<td id="cat5">{{ cat[categoryIndex] }}</td>
+					<td id="score5">{{ people[randIndex].results[cat[categoryIndex]] }}</td>
+				</tr>
+				<tr id="row6">
+				{% set randIndex = range(0,63) | random %}
+				{% set categoryIndex = range(0,26) | random %}
+					<td id="name6">{{ people[randIndex].name }}</td>
+					<td id="cat6">{{ cat[categoryIndex] }}</td>
+					<td id="score6">{{ people[randIndex].results[cat[categoryIndex]] }}</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="col-sm-4 text-center">
+			<img class="img-responsive" src="static/bsod1.png">
+		</div>
+
+		<div class="col-sm-4 text-center">
+			<table class="text-center">
+				<tr>
+					<th>Name</th>
+					<th>Category</th>
+					<th>Score</th>
+				</tr>
+				<tr id="row7">
+				{% set randIndex = range(1,63) | random %}
+				{% set categoryIndex = range(1,26) | random %}
+					<td id="name7">{{ people[randIndex].name }}</td>
+					<td id="cat7">{{ cat[categoryIndex] }}</td>
+					<td id="score7">{{ people[randIndex].results[cat[categoryIndex]] }}</td>
+				</tr>
+				<tr id="row8">
+				{% set randIndex = range(1,63) | random %}
+				{% set categoryIndex = range(1,26) | random %}
+					<td id="name8">{{ people[randIndex].name }}</td>
+					<td id="cat8">{{ cat[categoryIndex] }}</td>
+					<td id="score8">{{ people[randIndex].results[cat[categoryIndex]] }}</td>
+				</tr>
+				<tr id="row9">
+				{% set randIndex = range(1,63) | random %}
+				{% set categoryIndex = range(1,26) | random %}
+					<td id="name9">{{ people[randIndex].name }}</td>
+					<td id="cat9">{{ cat[categoryIndex] }}</td>
+					<td id="score9">{{ people[randIndex].results[cat[categoryIndex]] }}</td>
+				</tr>
+				<tr id="row10">
+				{% set randIndex = range(1,63) | random %}
+				{% set categoryIndex = range(1,26) | random %}
+					<td id="name10">{{ people[randIndex].name }}</td>
+					<td id="cat10">{{ cat[categoryIndex] }}</td>
+					<td id="score10">{{ people[randIndex].results[cat[categoryIndex]] }}</td>
+				</tr>
+				<tr id="row11">
+				{% set randIndex = range(1,63) | random %}
+				{% set categoryIndex = range(1,26) | random %}
+					<td id="name11">{{ people[randIndex].name }}</td>
+					<td id="cat11">{{ cat[categoryIndex] }}</td>
+					<td id="score11">{{ people[randIndex].results[cat[categoryIndex]] }}</td>
+				</tr>
+				<tr id="row12">
+				{% set randIndex = range(1,63) | random %}
+				{% set categoryIndex = range(1,10) | random %}
+					<td id="name12">{{ people[randIndex].name }}</td>
+					<td id="cat12">{{ cat[categoryIndex] }}</td>
+					<td id="score12">{{ people[randIndex].results[cat[categoryIndex]] }}</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+		<script>
+		function TestWrapper(){
+            $(document).ready(setInterval(function() {
+                $('#name').load('/boneless? #name');
+				$('#cat').load('/boneless? #cat');
+				$('#score').load('/boneless? #score');
+				$('#name2').load('/boneless? #name2');
+				$('#cat2').load('/boneless? #cat2');
+				$('#score2').load('/boneless? #score2');
+				$('#name3').load('/boneless? #name3');
+				$('#cat3').load('/boneless? #cat3');
+				$('#score3').load('/boneless? #score3');
+				$('#name4').load('/boneless? #name4');
+				$('#cat4').load('/boneless? #cat4');
+				$('#score4').load('/boneless? #score4');
+				$('#name5').load('/boneless? #name5');
+				$('#cat5').load('/boneless? #cat5');
+				$('#score5').load('/boneless? #score5');
+				$('#name6').load('/boneless? #name6');
+				$('#cat6').load('/boneless? #cat6');
+				$('#score6').load('/boneless? #score6');
+				$('#name7').load('/boneless? #name7');
+				$('#cat7').load('/boneless? #cat7');
+				$('#score7').load('/boneless? #score7');
+				$('#name8').load('/boneless? #name8');
+				$('#cat8').load('/boneless? #cat8');
+				$('#score8').load('/boneless? #score8');
+				$('#name9').load('/boneless? #name9');
+				$('#cat9').load('/boneless? #cat9');
+				$('#score9').load('/boneless? #score9');
+				$('#name10').load('/boneless? #name10');
+				$('#cat10').load('/boneless? #cat10');
+				$('#score10').load('/boneless? #score10');
+				$('#name11').load('/boneless? #name11');
+				$('#cat11').load('/boneless? #cat11');
+				$('#score11').load('/boneless? #score11');
+				$('#name12').load('/boneless? #name12');
+				$('#cat12').load('/boneless? #cat12');
+				$('#score12').load('/boneless? #score12');
+            }, 5000)); 
+			
+		}
+        </script>
+		<div class="row">
+			<div class="col text-center">
+				<h1>Designed by Dan!</h1>
+			</div>
+		</div>
+	</body>
+</html>
